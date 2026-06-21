@@ -2,7 +2,7 @@
 
 A full-stack CRUD application for managing user records, built with **TypeScript**, **Express**, **MySQL**, and **React**.
 
-## 🏗 Architecture
+## Architecture
 
 ```
 requip-assignment/
@@ -29,7 +29,7 @@ requip-assignment/
 └── README.md
 ```
 
-## 📋 User Entity
+## User Entity
 
 | Field | Type | Constraints |
 |-------|------|-------------|
@@ -48,7 +48,7 @@ requip-assignment/
 | createdAt | TIMESTAMP | Auto-generated |
 | updatedAt | TIMESTAMP | Auto-updated |
 
-## 🚀 Setup & Running
+## Setup & Running
 
 ### Prerequisites
 - **Node.js** 18+ and npm
@@ -79,7 +79,7 @@ npm install
 npm run dev             # Starts on http://localhost:5173
 ```
 
-## 📡 API Documentation
+## API Documentation
 
 Base URL: `http://localhost:5000/api`
 
@@ -139,7 +139,7 @@ curl -X POST http://localhost:5000/api/users \
   }'
 ```
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 cd backend
@@ -153,7 +153,7 @@ Unit tests cover the UserService layer with mocked MySQL:
 - Get user by ID (found, not found)
 - Delete user (soft delete, not found)
 
-## ✅ Best Practices Implemented
+## Best Practices Implemented
 
 ### Functional
 1. **Layered Architecture** — Controller → Service → Database separation for testability
@@ -175,7 +175,7 @@ Unit tests cover the UserService layer with mocked MySQL:
 7. **Responsive Design** — Mobile-first CSS with breakpoints
 8. **Accessible UI** — ARIA labels, keyboard navigation (Escape to close modals)
 
-## 💡 Pain Points & Learnings
+## Pain Points & Learnings
 
 ### Pain Points
 1. **MySQL Date Handling** — MySQL DATE type returns Date objects that need careful serialization when sending to the frontend. Used `.split('T')[0]` to extract the date portion.
@@ -190,6 +190,6 @@ Unit tests cover the UserService layer with mocked MySQL:
 4. **Debounced Search** — Essential for preventing API spam when users type in search fields. 400ms is a good balance between responsiveness and efficiency.
 5. **UUID v4** — Cryptographically random, no sequential guessing possible, but takes more storage than INT (36 chars vs 4 bytes).
 
-## 📜 License
+## License
 
 This project was created as part of the Requip Machine Coding Round assignment.
